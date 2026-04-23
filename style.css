@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+:root {
+  --bg: #e8e6e1;
+  --text: #3b3b3b;
+  --accent: #eab308;
+  --border: #3b3b3b;
+  --muted: #666666;
+}
+
+* {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 400;
+  background-color: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+}
+
+/* Full-width container */
+.container {
+  width: 100%;
+  padding: 2rem 4vw;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem 20px;
+  }
+}
+
+/* Nav Bar — full width */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--text);
+  color: var(--bg);
+  padding: 1rem 4vw;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 20px 1.5rem;
+  }
+}
+
+.site-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  color: var(--bg);
+  text-decoration: none;
+}
+
+.site-title:hover {
+  color: var(--accent);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.85rem;
+  color: var(--bg);
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--bg);
+  padding: 4px 8px;
+  transition: none;
+}
+
+.nav-links a.active {
+  background-color: var(--accent);
+  color: var(--text);
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+.nav-links a.active:hover {
+  color: var(--muted);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  color: var(--text);
+}
+
+h1.page-title {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+.subtitle {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 500;
+  font-size: 0.9rem;
+  background-color: var(--accent);
+  color: var(--text);
+  display: inline-block;
+  padding: 4px 10px;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+/* Sections with full-width separators */
+section {
+  margin-bottom: 3.5rem;
+  padding-bottom: 3.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+section:last-of-type {
+  border-bottom: none;
+}
+
+body.home section {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 2.5rem;
+}
+
+h2.section-heading {
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+}
+
+h3.subsection-heading {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Links */
+a {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--border);
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+nav a:hover, .btn-outline:hover, .badge:hover {
+  text-decoration: none;
+}
+
+ul {
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+li {
+  margin-bottom: 0.8rem;
+}
+
+/* Social links */
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.social-links a {
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: none;
+  text-decoration: none;
+  padding: 6px 0;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.95rem;
+}
+
+.social-links a:hover {
+  color: var(--accent);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-family: 'IBM Plex Mono', monospace;
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+/* Publications */
+.publication-item {
+  margin-bottom: 1.5rem;
+  padding-left: 0.5rem;
+  border-left: 2px solid transparent;
+}
+
+.publication-item:hover {
+  border-left: 2px solid var(--accent);
+}
+
+.note {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* Top bar (Download PDF) */
+.top-bar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1.5rem;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+  font-family: 'IBM Plex Mono', monospace;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: none;
+}
+
+.btn-outline:hover {
+  background-color: var(--accent);
+  color: var(--text);
+  border: 1px solid var(--border);
+  text-decoration: none;
+}
+
+/* CV timeline entries */
+.cv-entry {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.cv-date {
+  width: 120px;
+  flex-shrink: 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+  padding-top: 0.25rem;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.cv-content {
+  flex: 1;
+  min-width: 0;
+  border-left: 2px solid var(--border);
+  padding-left: 1.5rem;
+  transition: border-color 0s;
+}
+
+.cv-entry:hover .cv-content {
+  border-left-color: var(--accent);
+}
+
+.cv-role {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 0 0 0.3rem 0;
+  color: var(--text);
+}
+
+.cv-institution {
+  font-weight: 400;
+  margin-bottom: 0.4rem;
+}
+
+.cv-description {
+  margin-top: 0.4rem;
+  font-size: 0.95rem;
+}
+
+/* Badges */
+.badge {
+  background-color: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+  font-family: 'IBM Plex Mono', monospace;
+  text-transform: none;
+  padding: 2px 8px;
+  text-decoration: none;
+  font-size: 0.7rem;
+  display: inline-block;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+  text-indent: 0;
+  line-height: 1.4;
+}
+
+.badge:hover {
+  background-color: var(--accent);
+  color: var(--text);
+  text-decoration: none;
+}
+
+/* Profile photo */
+#profile-photo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  filter: grayscale(100%);
+  border: 1px solid var(--border);
+}
+
+/* Header with profile photo */
+.header-container {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+  margin-bottom: 3.5rem;
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Responsive tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+@media (max-width: 768px) {
+  .table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
